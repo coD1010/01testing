@@ -19,9 +19,14 @@ def move_to_another_hadler(driver,new_page_handler):
             break
 def test_multipple_tabs():
     original_page_handler = driver.current_window_handle
-    new_page_hendler = driver.find_element(By.XPATH,"https://thepulper.herokuapp.com/apps/pulp/]")
+    new_page_hendler = driver.find_element(By.XPATH,"/html/body/div/div[2]/p[56]/a")
     new_page_hendler.click()
 
     move_to_another_hadler(driver,original_page_handler)
 
-    movies_torrents = driver.find_element(By.XPATH)
+    books_link_1 = driver.find_element(By.XPATH,"//*[@id='menu-books-list-table']/a")
+    books_link_1.click()
+    #assert books_link_1 ==
+
+
+"""Este es un codigo para poderme mover entre pestanas de un browser , pero no esta terminado"""
